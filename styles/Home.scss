@@ -1,0 +1,38 @@
+@import "./variables.modules.scss";
+
+.home {
+    .list-item {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat( auto-fill, minmax(230px, 100px) );
+        gap: 40px 40px;
+    }
+
+    .item-card {
+        .title {
+            align-self: flex-start;
+            font-size: $p2;
+            font-weight: 500;
+            color: $dark2;
+        }
+
+        .btn-primary {
+            margin: 0 5px;
+        }
+    }
+}
+
+@include respond-to("mobile-medium") {
+    .home {
+        .list-item {
+            grid-template-columns: repeat( auto-fill, minmax(180px, 100px) );
+            gap: 20px 20px;
+        }
+
+        .item-card {
+            .btn-primary {
+                margin: 0 2px;
+            }
+        }
+    }
+}

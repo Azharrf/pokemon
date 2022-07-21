@@ -1,0 +1,20 @@
+@import "./variables.modules.scss";
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white2;
+
+    .container {
+        padding: 3rem;
+    }
+}
+
+@include respond-to("mobile-medium") {
+    .main-wrapper {
+        .container {
+            padding: 2rem 1.2rem;
+        }
+    }
+}
